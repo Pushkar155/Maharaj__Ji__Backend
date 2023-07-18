@@ -12,10 +12,9 @@ app.use(bodyparser.json());
 dotenv.config();
 
 ////// ALL Routes 
-
 app.use("/API/gallery",authgallery);
 app.use("/API/branch",authbranch);
-app.use("API/event",authevent);
+app.use("/API/event",authevent);
 
 app.get("/",(req,res)=>{
     res.send("Hello World From Server");

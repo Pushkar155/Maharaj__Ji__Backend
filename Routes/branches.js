@@ -11,7 +11,7 @@ router.post("/addBranch",async(req,res)=>{
     }
 });
 
-router.get("getBranch",async (req,res)=>{
+router.get("/getBranch",async (req,res)=>{
     const branch =await Branheschema.find();
     res.status(200).send(branch);
 })

@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const Galleryschema= require("../Schema/Gallery");
 
-router.post("addgallery",async(req,res)=>{
+router.post("/addgallery",async(req,res)=>{
     const newgallery = new Galleryschema(req.body);
     try {
         const savegallery= await newgallery.save();
@@ -11,7 +11,7 @@ router.post("addgallery",async(req,res)=>{
     }
 });
 
-router.get("getgallery",async (req,res)=>{
+router.get("/getgallery",async (req,res)=>{
     const gallery = await Galleryschema.find();
     res.status(200).send(gallery);
 })

@@ -12,7 +12,7 @@ router.post("/addevent",async (req,res)=>{
     }
 });
 
-router.get("getevent",async (req,res)=>{
+router.get("/getevent",async (req,res)=>{
     const event = await Eventschema.find();
     res.status(200).send(event);
 })
