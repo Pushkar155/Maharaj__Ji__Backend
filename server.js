@@ -3,9 +3,14 @@ const bodyparser=require("body-parser");
 const cors=require("cors");
 const dotenv=require("dotenv");
 const mongoose=require("mongoose");
+// All Auth
 const authgallery= require("./Routes/gallery");
 const authbranch = require("./Routes/branches");
 const authevent = require("./Routes/events");
+const authshlok = require("./Routes/geetashlok");
+const authmaharajji = require("./Routes/maharajji");
+
+
 const app=express();
 app.use(cors());
 app.use(bodyparser.json());
@@ -15,6 +20,8 @@ dotenv.config();
 app.use("/API/gallery",authgallery);
 app.use("/API/branch",authbranch);
 app.use("/API/event",authevent);
+app.use("/API/shlok",authshlok);
+app.use("/API/maharaji",authmaharajji);
 
 app.get("/",(req,res)=>{
     res.send("Hello World From Server");
