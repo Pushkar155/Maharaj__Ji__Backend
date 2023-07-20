@@ -23,6 +23,7 @@ app.use("/API/event",authevent);
 app.use("/API/shlok",authshlok);
 app.use("/API/maharaji",authmaharajji);
 
+
 app.get("/",(req,res)=>{
     res.send("Hello World From Server");
 })

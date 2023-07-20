@@ -1,4 +1,8 @@
 const router=require("express").Router();
+// const router=require("express").Router();
+// let router= require("express").Router();
+
+
 const GeetaShlokschema = require("../Schema/GeetaShlok");
 
 router.post("/addShlok",async(req,res)=>{
