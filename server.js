@@ -9,7 +9,7 @@ const authbranch = require("./Routes/branches");
 const authevent = require("./Routes/events");
 const authshlok = require("./Routes/geetashlok");
 const authmaharajji = require("./Routes/maharajji");
-
+const authanounce= require("./Routes/anounce");
 
 const app=express();
 app.use(cors());
@@ -17,11 +17,13 @@ app.use(bodyparser.json());
 dotenv.config();
 
 ////// ALL Routes 
+
 app.use("/API/gallery",authgallery);
 app.use("/API/branch",authbranch);
 app.use("/API/event",authevent);
 app.use("/API/shlok",authshlok);
 app.use("/API/maharaji",authmaharajji);
+app.use("/API/anounce",authanounce);
 
 
 app.get("/",(req,res)=>{
